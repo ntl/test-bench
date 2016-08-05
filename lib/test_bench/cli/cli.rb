@@ -20,6 +20,11 @@ module TestBench
 
       paths = argv
       paths << 'tests' if paths.empty?
+      if paths.length == 1
+        path, line_number = paths[0].split(':')
+        settings.line_number = line_number
+        paths = [path]
+      end
 
       current_directory = File.expand_path Dir.pwd
 

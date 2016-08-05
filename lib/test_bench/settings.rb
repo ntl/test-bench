@@ -5,6 +5,7 @@ module TestBench
     attr_writer :writer
     attr_writer :record_telemetry
     attr_writer :reverse_backtraces
+    attr_reader :line_number
 
     def abort_on_error
       nil_coalesce :@abort_on_error, Defaults.abort_on_error
@@ -48,6 +49,15 @@ module TestBench
 
     def writer
       @writer ||= Output::Writer.new
+    end
+
+    def line_number= value
+      value = value.to_i
+      if value > 0
+        @line_number = value 
+      else
+        @line_number = nil
+      end
     end
 
     def self.toplevel

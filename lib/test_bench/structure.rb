@@ -32,6 +32,7 @@ module TestBench
         Structure.error error, binding
 
       ensure
+        @test_instance = nil
         nesting = telemetry.context_exited prose
 
         if nesting.zero? and telemetry.failed?
@@ -46,6 +47,10 @@ module TestBench
 
     def test prose=nil, &block
       telemetry = Telemetry::Registry.get binding
+      settings = Settings::Registry.get binding
+      line_number = settings.line_number
+      require 'pry'
+      return if line_number && line_number != block.source_location[1]
 
       prose ||= 'Test'
 
