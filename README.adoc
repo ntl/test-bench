@@ -1,0 +1,4 @@
+[NOTE]
+====
+Since the release of TestBench 2, TestBench has been link:https://github.com/test-bench/test-bench[moved]! The previous 1.x project can be found link:https://github.com/test-bench/test-bench-1.x[here]
+====
