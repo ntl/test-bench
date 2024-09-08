@@ -1,0 +1,4 @@
+/gems
+/Gemfile.lock
+/pkg
+/bin/*
