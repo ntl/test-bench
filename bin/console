@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-require "TEMPLATE-PATH"
+require "test_bench"
 
 require "irb"
 IRB.start(__FILE__)

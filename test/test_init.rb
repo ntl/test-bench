@@ -2,4 +2,4 @@ require_relative '../init'
 
 require 'test_bench'; TestBench.activate
 
-TestBench::ImportConstants.(TEMPLATE-NAMESPACE)
+TestBench::ImportConstants.(TestBench)
