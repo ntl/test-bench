@@ -7,7 +7,7 @@ module TestBench
 
           StateError = Class.new(RuntimeError)
 
-          Failed = Fixture::Session::Events::Failed
+          Failed = Fixture::Events::Failed
 
           attr_accessor :current_file
 

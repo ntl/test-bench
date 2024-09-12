@@ -7,7 +7,7 @@ module TestBench
         Error = Class.new(RuntimeError)
 
         def session_output
-          @session_output ||= Fixture::Session::Output::Substitute.build
+          @session_output ||= Fixture::Output::Substitute.build
         end
         attr_writer :session_output
 
@@ -25,7 +25,7 @@ module TestBench
         attr_writer :only_failure
 
         def configure(writer: nil)
-          Fixture::Session::Output.configure(
+          Fixture::Output.configure(
             self,
             writer:,
             attr_name: :session_output

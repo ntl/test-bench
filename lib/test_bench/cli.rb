@@ -141,7 +141,7 @@ module TestBench
           end
 
           detail_policy = detail_policy_text.to_sym
-          Fixture::Session::Output::Detail.assure_detail(detail_policy)
+          Fixture::Output::Detail.assure_detail(detail_policy)
 
           env['TEST_BENCH_DETAIL'] = detail_policy_text
 
@@ -220,7 +220,7 @@ module TestBench
       \t-v, --version                     Print version and exit successfully
 
       Configuration Options:
-      \t-d, --[no]detail                  Always show (or hide) details (Default: #{Fixture::Session::Output::Detail.default})
+      \t-d, --[no]detail                  Always show (or hide) details (Default: #{Fixture::Output::Detail.default})
       \t-x, --[no-]exclude PATTERN        Do not execute test files matching PATTERN (Default: #{Run::GetFiles::Defaults.exclude_patterns.inspect})
       \t-f, --[no-]only-failure           Don't display output for test files that pass (Default: #{Run::Output::File::Defaults.only_failure ? 'on' : 'off'})
       \t-o, --output-styling [on|off|detect]
