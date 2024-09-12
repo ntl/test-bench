@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'test_bench'
-  spec.version = "0.0.0.0"
+  spec.version = "0.0.0.1"
   spec.summary = "Some summary"
   spec.description = ' '
 
